@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Medical App</title>
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="script.js"></script>
+</head>
+<body>
+
+  <!-- Main Content -->
+  <div class="nav-container">
+    <!-- Bottom Navigation for Mobile -->
+    <div class="bottom-nav">
+      <a href="#" class="nav-item" title="Reminder">
+        <span class="icon">&#128197;</span> <!-- Icon for Reminder -->
+      </a>
+      <a href="#" class="nav-item" title="Record">
+        <span class="icon">&#128206;</span> <!-- Icon for Record -->
+      </a>
+      <a href="#" class="nav-item" title="Helpline">
+        <span class="icon">&#128222;</span> <!-- Icon for Helpline -->
+      </a>
+      <a href="#" class="nav-item" title="My Account">
+        <span class="icon">&#128100;</span> <!-- Icon for My Account -->
+      </a>
+    </div>
+  </div>
+</div> 
+
+
+  <div class="container">
+    <header class="header">
+      <div class="welcome">
+        <p>👋 Hello!</p>
+        <h1 id="user-name">Guest</h1>
+      </div>
+      <img src="Images/account.png" alt="User Avatar" class="avatar">
+    </header>
+
+    <div class="search-bar">
+      <input type="text" placeholder="Search medical...">
+      <button class="settings-btn">⚙️</button>
+    </div>
+
+    <section class="services">
+      <a href="/doctor" class="service">
+        <span>⏱️</span><p>Reminder</p>
+      </a>
+      <a href="/medicine" class="service">
+        <span>💊</span><p>Medicine</p>
+      </a>
+      <a href="/reports" class="service">
+        <span>📋</span><p>Reports</p>
+      </a>
+      <a href="/tests" class="service">
+        <span>🧬</span><p>Tests</p>
+      </a>
+    </section>
+
+    <div class="container">
+      <div id="digital-clock">8:34:58 PM</div>
+    </div>    
+
+    <section class="promo">
+      <h2>Get the Best Medical Service</h2>
+      <p>Lorem Ipsum is simply dummy text of the printing.</p>
+      <img src="doctor.jpg" alt="Doctor">
+    </section>
+
+    <section class="appointments">
+      <h3>Upcoming Appointments</h3>
+      <div class="appointment">
+        <div class="date">
+          <p>12</p>
+          <p>Tue</p>
+        </div>
+        <div class="details">
+          <h4>09:30 AM</h4>
+          <p>Dr. Buvanesh</p>
+          <p>Depression</p>
+        </div>
+      </div>
+
+      <div class="appointment">
+        <div class="date">
+          <p>12</p>
+          <p>Tue</p>
+        </div>
+        <div class="details">
+          <h4>09:50 AM</h4>
+          <p>Dr. Mim Akhter</p>
+          <p>Depression</p>
+        </div>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    // Extract 'name' from the URL query parameters and display it
+    const urlParams = new URLSearchParams(window.location.search);
+    const userName = urlParams.get('name') || 'Guest';
+    document.getElementById('user-name').textContent = userName;
+  </script>
+
+</body>
+</html>

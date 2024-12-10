@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="login_page.css">
+</head>
+<body>
+  <div class="container">
+    <div class="login-box">
+      <h1>Welcome</h1>
+      <p>Login to Continue</p>
+      <form id="login-form">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+        <label for="mobile">Mobile Number</label>
+        <input type="tel" id="mobile" name="mobile" placeholder="Enter your mobile number" required>
+
+        <button type="submit" class="submit-btn">LOGIN</button>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    // JavaScript to handle redirection and name transfer
+    const form = document.getElementById('login-form');
+    form.addEventListener('submit', function (e) {
+      e.preventDefault(); // Prevent the default form submission
+      const name = document.getElementById('name').value;
+      const url = `home.html?name=${encodeURIComponent(name)}`;
+      window.location.href = url; // Redirect to home.html with the name in query params
+    });
+  </script>
+</body>
+</html>
